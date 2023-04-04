@@ -1,7 +1,7 @@
 if not game:IsLoaded() then game.Loaded:Wait() end
 local ws = syn and syn.websocket.connect or Krnl and Krnl.WebSocket.connect or WebSocket and WebSocket.connect or websocket and websocket.connect
 local web
-repeat wait() until pcall(function() web = ws("ws://localhost:8080") end) == true
+repeat wait() until pcall(function() web = ws("ws://localhost:3000") end) == true
 
 if not _G.autoran then
     web:Send("autoexec")
